@@ -17,13 +17,13 @@ primitives = [("+", numericBinop (+)),
               ("mod", numericBinop mod),
               ("quotient", numericBinop quot),
               ("remainder", numericBinop rem),
-              ("boolean?", atomicUnop isBool),
-              ("string?", atomicUnop isString),
-              ("number?", atomicUnop isNumber),
-              ("symbol?", atomicUnop isSymbol),
+              --("boolean?", atomicUnop isBool),
+              --("string?", atomicUnop isString),
+              --("number?", atomicUnop isNumber),
+              --("symbol?", atomicUnop isSymbol),
               ]
 
-atomicUnop :: 
+-- atomicUnop :: 
 
 numericBinop :: (Integer -> Integer -> Integer) -> [LispVal] -> LispVal
 numericBinop op params = Number $ foldl1 op $ map unpackNum params
